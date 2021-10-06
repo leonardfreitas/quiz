@@ -1,1 +1,2 @@
 COMMAND_EXIT = "exit"
+COMMAND_CREATE_PLAYER = "add"
