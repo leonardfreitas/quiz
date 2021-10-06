@@ -1,9 +1,12 @@
-from commands import COMMAND_EXIT, COMMAND_CREATE_PLAYER
-from settings import GAME_NAME, LANG, LANGS
+from commands import (
+    COMMAND_EXIT, 
+    COMMAND_CREATE_PLAYER, 
+    COMMAND_LIST_PLAYERS
+)
+from settings import GAME_NAME
+from services import create_player, list_players
 
 run = True
-
-players = []
 
 while run:
     command = input(f"{GAME_NAME} >> ")
@@ -12,5 +15,7 @@ while run:
         run = False
 
     if command == COMMAND_CREATE_PLAYER:
-        message = LANGS[LANG]["create_user"]
-        name = input(f"{message}: ")
+        create_player()
+
+    if command == COMMAND_LIST_PLAYERS:
+        list_players()
