@@ -1,4 +1,4 @@
-1. [] Jogo de perguntas e resposta
+1. [ ] Jogo de perguntas e resposta
 2. [x] Cadastro de jogador
 3. [x] Play do jogo
 4. [] Randomizar perguntas
