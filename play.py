@@ -1,21 +1,23 @@
-from commands import (
-    COMMAND_EXIT, 
-    COMMAND_CREATE_PLAYER, 
-    COMMAND_LIST_PLAYERS
-)
+import commands as cmd
 from settings import GAME_NAME
-from services import create_player, list_players
+from services import create_player, list_players, create_question, list_questions
 
 run = True
 
 while run:
     command = input(f"{GAME_NAME} >> ")
 
-    if command == COMMAND_EXIT:
+    if command == cmd.COMMAND_EXIT:
         run = False
 
-    if command == COMMAND_CREATE_PLAYER:
+    if command == cmd.COMMAND_CREATE_PLAYER:
         create_player()
 
-    if command == COMMAND_LIST_PLAYERS:
+    if command == cmd.COMMAND_LIST_PLAYERS:
         list_players()
+
+    if command == cmd.COMMAND_CREATE_QUESTION:
+        create_question()
+
+    if command == cmd.COMMAND_LIST_QUESTIONS:
+        list_questions()
