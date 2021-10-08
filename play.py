@@ -1,6 +1,6 @@
 import commands as cmd
 from settings import GAME_NAME
-from services import create_player, list_players, create_question, list_questions
+from services import create_player, list_players, create_question, list_questions, play
 
 run = True
 
@@ -21,3 +21,6 @@ while run:
 
     if command == cmd.COMMAND_LIST_QUESTIONS:
         list_questions()
+    
+    if command == cmd.COMMAND_PLAY:
+        play()
